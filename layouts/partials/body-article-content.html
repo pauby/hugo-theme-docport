@@ -46,7 +46,7 @@
 	            		{{$pagetitle := .Title}}
 	        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
 	            	<li {{if eq . $cPage}}class="active"{{- end}}>
-	            		<a title="$pagetitle" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
+	            		<a title="{{$pagetitle}}" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
 	            	</li>
 		            {{- end}}
 		          {{- end}}  
